@@ -19,6 +19,7 @@
             </list>
         </constructor-arg>
     </bean>
+
 <!--    <bean id="compactDisc" class="soundsystem.BlankDisc"-->
 <!--          c:title="wzz" c:artist="cc"/>-->
 </beans>
