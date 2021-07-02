@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    <bean id="person" class="com.atguigu.Person">-->
+<!--        &lt;!&ndash;property调用set方法 &ndash;&gt;-->
+<!--        <property name="name" value="cc"/>-->
+<!--        <property name="age" value="41"/>-->
+<!--        <property name="gender" value="女"/>-->
+<!--        <property name="email" value="cc@com"/>-->
+<!--    </bean>-->
+        <bean id="car" class="com.atguigu.Car">
+                <constructor-arg name="carName" value="卡宴"></constructor-arg>
+                <constructor-arg name="color" value="比斯开蓝"></constructor-arg>
+                <constructor-arg name="price" value="1080000"></constructor-arg>
+        </bean>
+        <bean id="book" class="com.atguigu.Book">
+                <constructor-arg index="0" value="cc"/>
+                <constructor-arg index="1" value="love2"/>
+        </bean>
+
+        <bean id="person" class="com.atguigu.Person">
+          <property name="name" value="wzz"/>
+                <property name="age" value="41"/>
+                <property name="gender" value="男"/>
+                <property name="email" value="zhenzhong.wang@outlook.com"/>
+                <property name="car" ref="car"/>
+                <property name="books" ref="book"/>
+                <property name="maps">
+                        <map>
+                                <entry key="key01" value="cc"/>
+                                <entry key="key02" value="wzz"/>
+                        </map>
+                </property>
+        </bean>
+
+</beans>

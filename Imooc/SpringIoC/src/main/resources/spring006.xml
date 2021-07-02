@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="com.example.springioc.class006.AnotherBean" name="anotherBean"></bean>
+    <bean id="bean" class="com.example.springioc.class006.Bean" >
+        <constructor-arg index="0" name="anotherBean" type="com.example.springioc.class006.AnotherBean"
+                         ref="anotherBean"></constructor-arg>
+        <constructor-arg index="1" name="str" type="java.lang.String" value="wzz love cc"></constructor-arg>
+        <property name="anotherBean1" ref="anotherBean"></property>
+        <property name="str1" value="cc love wzz"></property>
+
+        <property name="stringList">
+            <list>
+                <value>wzz</value>
+                <value>cc</value>
+            </list>
+        </property>
+
+        <property name="anotherBeanList">
+            <list>
+                <ref bean="anotherBean"/>
+                <ref bean="anotherBean"/>
+            </list>
+        </property>
+
+        <property name="stringSet">
+            <set>
+                <value>wzz</value>
+                <value>cc</value>
+            </set>
+        </property>
+
+        <property name="anotherBeanSet">
+            <set>
+                <ref bean="anotherBean"/>
+                <ref bean="anotherBean"/>
+            </set>
+        </property>
+
+        <property name="stringMap">
+            <map>
+                <entry key="wzz" value="sxh"/>
+                <entry key="cc" value="wzz"/>
+            </map>
+        </property>
+
+        <property name="anotherBeanMap">
+            <map>
+                <entry key-ref="anotherBean" value-ref="anotherBean"/>
+            </map>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="wzz">love cc</prop>
+            </props>
+        </property>
+
+        <property name="anotherBean2">
+            <null/>
+        </property>
+    </bean>
+<!--    <bean id="bean" class="com.example.springioc.class006.Bean"-->
+<!--        c:anotherBean-ref="anotherBean" c:str="wzz love cc" p:anotherBean1-ref="anotherBean" p:str1="cc love wzz"-->
+<!--    />-->
+</beans>

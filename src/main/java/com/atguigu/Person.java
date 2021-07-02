@@ -1,5 +1,8 @@
 package com.atguigu;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * @author wzz
  * @version V1.0
@@ -11,13 +14,24 @@ public class Person {
     private String gender;
     private String email;
 
-    public Person(String name, Integer age, String gender, String email) {
+    private Car car;
+    private List<Book> books;
+    private Map<String, Object> maps;
+
+    public Person() {
+    }
+
+    public Person(String name, Integer age, String gender, String email, Car car, List<Book> books, Map<String, Object> maps) {
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.email = email;
-        System.out.println("调用构造器");
+        this.car = car;
+        this.books = books;
+        this.maps = maps;
     }
+
+
 
     public String getName() {
         return name;
@@ -51,6 +65,31 @@ public class Person {
         this.email = email;
     }
 
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
+
+    public Map<String, Object> getMaps() {
+        return maps;
+    }
+
+    public void setMaps(Map<String, Object> maps) {
+        this.maps = maps;
+    }
+
+
     @Override
     public String toString() {
         return "Person{" +
@@ -58,7 +97,9 @@ public class Person {
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
                 ", email='" + email + '\'' +
+                ", car=" + car +
+                ", books=" + getBooks() +
+                ", maps=" + maps +
                 '}';
     }
-
 }

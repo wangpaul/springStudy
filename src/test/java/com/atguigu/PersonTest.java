@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class PersonTest {
     @Test
     public void test(){
-        ApplicationContext ac = new ClassPathXmlApplicationContext("META-INF/spring/person.xml");
+        ApplicationContext ac = new ClassPathXmlApplicationContext("META-INF/spring/person2.xml");
         //Person bean = (Person) ac.getBean("person");
         Person bean = ac.getBean(Person.class);
         System.out.println(bean);
