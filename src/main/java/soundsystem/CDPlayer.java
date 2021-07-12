@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 /**
  * @author wzz
  * @version V1.0
- * @date 2021/6/25 17:08
+ * @date 2021/7/7 10:34
  */
 @Component
-public class CDPlayer implements MediaPlayer {
+public class CDPlayer implements MediaPlayer{
     private CompactDisc cd;
 
     @Autowired

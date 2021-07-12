@@ -1,14 +1,12 @@
 package soundsystem;
 
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * @author wzz
@@ -21,15 +19,11 @@ import static org.junit.Assert.*;
 @ContextConfiguration(classes=CDPlayerConfig.class)
 public class CDPlayerTest {
 
-    @Rule
-    public final SystemOutRule log = new SystemOutRule().enableLog();
-
-    //将CompactDiscbean注入到测试
     @Autowired
     private CompactDisc cd;
 
     @Autowired
-    private MediaPlayer player;
+    private MediaPlayer mediaPlayer;
 
     @Test
     public void cdShouldNotBeNull(){
@@ -39,9 +33,7 @@ public class CDPlayerTest {
 
     @Test
     public void play(){
-        player.play();
-//        assertEquals(
-//                "Playing wzz by cc\n",
-//                log.getLog());
+        mediaPlayer.play();
     }
+
 }

@@ -3,7 +3,7 @@ package soundsystem;
 /**
  * @author wzz
  * @version V1.0
- * @date 2021/6/25 17:09
+ * @date 2021/7/7 10:37
  */
 public interface MediaPlayer {
     void play();

@@ -10,6 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @date 2021/7/5 20:33
  */
 public class Class015Test {
+
     @Test
     public void test(){
         ApplicationContext context = new AnnotationConfigApplicationContext(TestConfiguration.class);
@@ -26,5 +27,8 @@ public class Class015Test {
         for(int i = 0; i < 10; i++){
             testBean2.printAnotherBean();
         }
+
+        
     }
+
 }
